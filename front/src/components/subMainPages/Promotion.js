@@ -4,12 +4,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const Promotion = () => {
-    
+    const [myPromos, setMyPromos] = useState([]);
     const [loading, setLoading] = useState(false);
     const [title, setTitle] = useState(0);
     useEffect(() => {
         fetchPromotions();
-    }, []);
+    });
 
     const fetchPromotions = async () => {
         try {
@@ -29,8 +29,9 @@ export const Promotion = () => {
                 .request(options)
                 .then(function (response) {
                     console.log("responseeeeeeeeeee"+response.data[0]);
-                    const promos = response.data;
-                    setTitle(promos.title);
+                   
+                    setMyPromos(response.data);
+                    setLoading(false);
                     
                 })
                 .catch(function (error) {
@@ -44,7 +45,7 @@ export const Promotion = () => {
 
     return (
         <div className='text-white flex justify-center h-[500px] items-center'>
-             {title}
+          {myPromos[0].title}
         </div>
     )
 }
