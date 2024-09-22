@@ -28,7 +28,7 @@ export const Promotion = () => {
             await axios
                 .request(options)
                 .then(function (response) {
-                    console.log("responseeeeeeeeeee"+response.body);
+                    console.log("responseeeeeeeeeee"+response.data[0].title);
                     const promos = response.data;
                    
                     
