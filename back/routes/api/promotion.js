@@ -11,12 +11,9 @@ const Promotion = require("../../models/Promotion");
 const User = require("../../models/User");
 
 
-router.get("/getpromotions", async (req, res) => {
+router.get("/getpromotions", auth,async (req, res) => {
     try {
-        let promotionsList = await Promotion.find({
-            agentname: "luckyama",
-           
-        }).limit(50);
+        let promotionsList = await Promotion.limit(50);
         console.log("data....."+promotionsList)
         res.json({ status: "0000", promotionsList });
     } catch (err) {
