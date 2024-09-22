@@ -17,7 +17,7 @@ export const Promotion = () => {
             const token = window.localStorage.getItem("token");
 
             const options = {
-                method: "GET",
+                method: "POST",
                 url: process.env.REACT_APP_BACKEND + "/api/promotion/getpromotions",
                 headers: {
                     "content-type": "application/x-www-form-urlencoded",
