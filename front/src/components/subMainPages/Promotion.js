@@ -30,7 +30,7 @@ export const Promotion = () => {
                 .then(function (response) {
                     console.log("responseeeeeeeeeee"+response.data[0]);
                     const promos = response.data;
-                    setTitle(promo.title);
+                    setTitle(promos.title);
                     
                 })
                 .catch(function (error) {
