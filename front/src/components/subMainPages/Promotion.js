@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export const Promotion = () => {
     
     const [loading, setLoading] = useState(false);
-
+    const [title, setTitle] = useState(0);
     useEffect(() => {
         fetchPromotions();
     }, []);
@@ -30,7 +30,7 @@ export const Promotion = () => {
                 .then(function (response) {
                     console.log("responseeeeeeeeeee"+response.data[0]);
                     const promos = response.data;
-                   
+                    setTitle(promo.title);
                     
                 })
                 .catch(function (error) {
@@ -44,7 +44,7 @@ export const Promotion = () => {
 
     return (
         <div className='text-white flex justify-center h-[500px] items-center'>
-            This is Promotion Page!
+             {title}
         </div>
     )
 }
