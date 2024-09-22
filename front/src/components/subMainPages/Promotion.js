@@ -18,7 +18,7 @@ export const Promotion = () => {
 
             const options = {
                 method: "GET",
-                url: process.env.REACT_APP_BACKEND + "api/promotion/getpromotions",
+                url: process.env.REACT_APP_BACKEND + "/api/promotion/getpromotions",
                 headers: {
                     "content-type": "application/x-www-form-urlencoded",
                     "x-auth-token": token,

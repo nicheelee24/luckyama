@@ -59,6 +59,8 @@ app.use("/api/pay", require("./routes/api/pay"));
 app.use("/api/agent", require("./routes/api/agent"));
 app.use("/api/transaction", require("./routes/api/transaction"));
 app.use("/api/util", require("./routes/api/util"));
+app.use("/api/promotion", require("./routes/api/promotion"));
+
 
 app.use("/bandai/api/auth", require("./routes/bandai/auth"));
 app.use("/bandai/api/agent", require("./routes/bandai/agent"));
