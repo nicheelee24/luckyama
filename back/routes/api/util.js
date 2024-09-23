@@ -145,7 +145,7 @@ router.post("/my-bet", auth, async (req, res) => {
     console.log("my bets function called..");
     const user = await User.findById(req.user.id);
     const { gameType } = req.body;
-    console.log("userrr namee..."+userId);
+    console.log("userrr namee..."+user.name);
     let filter = {
         userId: user.name,
         
