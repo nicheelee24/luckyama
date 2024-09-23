@@ -141,11 +141,13 @@ router.post("/financial-report", auth, async (req, res) => {
 // My Bet List
 // Method POST
 // Middleware auth
-router.post("/my-bet", async (req, res) => {
+router.post("/my-bet", auth, async (req, res) => {
     console.log("my bets function called..");
+    
     const user = await User.findById(req.user.id);
-    const { gameType } = req.body;
     console.log("userrr namee..."+user.name);
+    const { gameType } = req.body;
+    
     let filter = {
         userId: user.name,
         
