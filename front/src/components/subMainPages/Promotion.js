@@ -47,7 +47,7 @@ export const Promotion = () => {
     return (
         <div className='text-white flex justify-center h-[500px] items-center'>
         {myPromos.map((promo, index) => (
-            <div>{promo.title}</div>
+            <div>{promo.title}{"jhguygyuuytguytuytgytyt"}</div>
         ))}
 
         </div>
