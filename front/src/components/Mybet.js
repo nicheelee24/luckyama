@@ -23,7 +23,7 @@ export const MyBet = () => {
         try {
             setLoading(true);
             const token = window.localStorage.getItem("token");
-
+console.log("tokenn...."+token);
             const options = {
                 method: "POST",
                 url: process.env.REACT_APP_BACKEND + "/api/util/my-bet",
